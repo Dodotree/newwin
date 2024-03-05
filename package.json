@@ -37,5 +37,22 @@
     "typescript": "^5.3.3",
     "@vscode/test-cli": "^0.0.6",
     "@vscode/test-electron": "^2.3.9"
-  }
+  },
+
+  "contributes": {
+    "commands": [
+        {
+            "command": "extension.newWindow",
+            "title": "Open New Window"
+        }
+    ],
+    "menus": {
+        "editor/context": [
+            {
+                "command": "extension.newWindow",
+                "group": "navigation"
+            }
+        ]
+    }
+}
 }
